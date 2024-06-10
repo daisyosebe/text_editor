@@ -45,6 +45,9 @@ export const getDb = async () => {
   // You can duplicate the same lines of code from above, except that the transaction will be 'readonly'
   
   // TODO: Copy LINES 28, 31 and 34 above; the new line 31 code should be "readonly"
+  const db = await openDB(DB_NAME, 1); // Open the database
+  const tx = db.transaction(DB_NAME, 'readonly'); // Create a transaction
+  const store = tx.objectStore(DB_NAME)// Get the object store
 
   // Leave the rest as-is
   const request = store.get(1);
