@@ -54,16 +54,6 @@ module.exports = () => {
     module: {
       rules: [
 
-        /*
-          TODO: In this array, we need to configure the rules 
-          for when Webpack should "bundle-ize" our files. Each rule 
-          is an object. We will be setting up two rules. 
-          
-          You will find both rules in the solution for the mini 
-          project. 
-
-          When you copy and paste them below, you'll be done here.
-        */
           {
             test: /\.css$/i,
             use: ['style-loader', 'css-loader'],
